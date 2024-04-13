@@ -30,7 +30,7 @@ public class AwesomeLinkFilter implements Filter {
 
 	public static final Pattern FILE_PATTERN = Pattern.compile(
 			"(?<link>(?<path>\"?([.~])?(([a-zA-Z]:)?[\\\\/])?\\w[@\\w/\\-.\\\\]*\\.[\\w\\-.]+)\\$?" +
-			"(?:(?::|\"?, line |:\\[|\\()(?<row>\\d+)(?:[:,]( column )?(?<col>\\d+)([)\\]])?)?)?)",
+			"(?:(?::|\"?, line |:line |:\\[|\\()(?<row>\\d+)(?:[:,]( column )?(?<col>\\d+)([)\\]])?)?)?)",
 			Pattern.UNICODE_CHARACTER_CLASS);
 	public static final Pattern URL_PATTERN = Pattern.compile(
 			"(?<link>[(']?(?<protocol>(([a-zA-Z]+):)?([/\\\\~]))(?<path>[-.!~*\\\\'()\\w;/?:@&=+$,%#]+))",

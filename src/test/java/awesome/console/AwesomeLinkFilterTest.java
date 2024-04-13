@@ -196,6 +196,11 @@ public class AwesomeLinkFilterTest extends BasePlatformTestCase {
 	}
 
 	@Test
+	public void testCSharpStacktraceFormat() {
+		assertPathDetection("C:/some/very/weird/path/test.cs:line 456", "C:/some/very/weird/path/test.cs:line 456", 456);
+	}
+
+	@Test
 	public void testPythonTracebackWithQuotes() {
 		assertPathDetection("File \"/Applications/plugins/python-ce/helpers/pycharm/teamcity/diff_tools.py\", line 38", "\"/Applications/plugins/python-ce/helpers/pycharm/teamcity/diff_tools.py\", line 38",38);
 	}
